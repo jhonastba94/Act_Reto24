@@ -1,0 +1,42 @@
+<section>
+  <mat-form-field appearance="fill">
+    <mat-label for="nombreInput">¿Cuál es tu nombre?</mat-label>
+    <input matInput [(ngModel)]="name" type="text" id="nombreInput" name="nombreInput" autocomplete="false">
+  </mat-form-field>
+
+  <div>
+    <p *ngIf="name">Hola, {{name}} ¿Cuál es tu deporte favorito?</p>
+  </div>
+
+  <button mat-raised-button (click)="openDialog()" [disabled]="!name">Click aquí</button>
+
+  <div class="mt">
+    <p *ngIf="sport"> Tu deporte favorito es: <em>{{sport}}</em> </p>
+  </div>
+
+</section>
+
+
+
+<style>
+  mat-form-field,
+  input {
+    width: 100% !important;
+  }
+
+  section {
+    margin: 3rem;
+    background-color: cornflowerblue;
+    padding: 2rem;
+    width: 30rem;
+    border-radius: .5rem;
+  }
+
+  .mt:empty {
+    display: none;
+  }
+
+  .mt {
+    margin-top: 1rem;
+  }
+</style>

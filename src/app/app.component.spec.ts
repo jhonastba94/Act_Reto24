@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ActividadAsincrona24'`, () => {
+  it(`should have as title 'sesion22-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ActividadAsincrona24');
+    expect(app.title).toEqual('sesion22-angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ActividadAsincrona24 app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('sesion22-angular app is running!');
   });
 });
